@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Drum kit</title>
+  </head>
+  <body>
+    <div class="drumkit__container">
+      <ul class="drumkit">
+        <li class="drumkit__item" data-key="A">
+          <h2>A</h2>
+          <p>KICK</p>
+        </li>
+        <li class="drumkit__item" data-key="S">
+          <h2>S</h2>
+          <p>BELL</p>
+        </li>
+        <li class="drumkit__item" data-key="D">
+          <h2>D</h2>
+          <p>KICK2</p>
+        </li>
+        <li class="drumkit__item" data-key="F">
+          <h2>F</h2>
+          <p>GUITAR</p>
+        </li>
+        <li class="drumkit__item" data-key="G">
+          <h2>G</h2>
+          <p>ELEC</p>
+        </li>
+        <li class="drumkit__item" data-key="H">
+          <h2>H</h2>
+          <p>ORCH</p>
+        </li>
+        <li class="drumkit__item" data-key="J">
+          <h2>J</h2>
+          <p>PIANO</p>
+        </li>
+        <li class="drumkit__item" data-key="K">
+          <h2>K</h2>
+          <p>ORGANS</p>
+        </li>
+        <li class="drumkit__item" data-key="L">
+          <h2>L</h2>
+          <p>LEAD</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="audio__set">
+      <audio src="Bass-Drum-1.wav" data-key="A"></audio>
+      <audio src="Alesis-Fusion-Tubular-Bells-C6.wav" data-key="S"></audio>
+      <audio src="Deep-Kick.wav" data-key="F"></audio>
+      <audio
+        src="Alesis-Fusion-Nylon-String-Guitar-C4.wav"
+        data-key="D"
+      ></audio>
+      <audio src="Alesis-S4-Plus-Clean-Gtr-C4.wav" data-key="G"></audio>
+      <audio src="Alesis-S4-Plus-Bari-Sax-C2.wav" data-key="H"></audio>
+      <audio
+        src="Alesis-Fusion-Bright-Acoustic-Piano-C2.wav"
+        data-key="J"
+      ></audio>
+      <audio
+        src="Alesis-Sanctuary-QCard-GlassOrgan-C3.wav"
+        data-key="K"
+      ></audio>
+      <audio src="Alesis-S4-Plus-Brassy-5th-C4.wav" data-key="L"></audio>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -23,40 +23,76 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
+  position: relative;
 }
 .clock::before {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: aqua;
   position: absolute;
 }
 
+/* ************************** */
+/* hand  */
+/* ************************** */
 .hand {
-  width: 120px;
-  height: 8px;
-  border: 3px solid #fff;
+  transform-origin: bottom;
   position: absolute;
-  transform: translateX(50%);
+  bottom: 50%;
 }
 
 .hour {
+  width: 8px;
+  height: 100px;
   background-color: #fff;
 }
 .minute {
-  width: 140px;
-  height: 5px;
-  background-color: orange;
+  width: 6px;
+  height: 130px;
+  background-color: rgb(234, 231, 226);
 }
 .second {
-  width: 150px;
-  height: 1px;
-  background-color: lightgrey;
+  width: 2px;
+  height: 150px;
+  background-color: rgb(76, 76, 137);
+}
+
+/* ************************** */
+/* Scale  */
+/* ************************** */
+.scale {
+  position: absolute;
+  background-color: gainsboro;
+}
+.twelve,
+.six {
+  width: 5px;
+  height: 15px;
+}
+.three,
+.nine {
+  width: 15px;
+  height: 5px;
+}
+.twelve {
+  top: 0;
+}
+.six {
+  bottom: 0;
+}
+.three {
+  right: 0;
+}
+.nine {
+  left: 0;
 }
 
 p {
-  background-color: red;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
 }

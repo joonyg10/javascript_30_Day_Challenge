@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>Color Array</title>
+  </head>
+  <body>
+    <h1>Update CSS Variables with <span>JS</span></h1>
+    <div class="controller__wrapper">
+      <label for="perspective"
+        >Perspective
+        <input type="range" id="perspective" min="0" max="500" value="0" />
+      </label>
+      <label for="blur">
+        Blur: <input type="range" id="blur" min="0" max="10" value="0" />
+      </label>
+      <label for="color">
+        Base Color
+        <input type="color" class="color" id="color" value="#ddb813" />
+      </label>
+    </div>
+    <div class="city__container">
+      <img src="./nightcity.jpg" alt="City Image here" id="city" />
+    </div>
+  </body>
+</html>

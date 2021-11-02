@@ -11,17 +11,34 @@
   <body>
     <h1>Update CSS Variables with <span>JS</span></h1>
     <div class="controller__wrapper">
-      <label for="perspective"
-        >Perspective
-        <input type="range" id="perspective" min="0" max="500" value="0" />
-      </label>
-      <label for="blur">
-        Blur: <input type="range" id="blur" min="0" max="10" value="0" />
-      </label>
-      <label for="color">
-        Base Color
-        <input type="color" class="color" id="color" value="#ddb813" />
-      </label>
+      <label for="perspective">Perspective </label>
+      <input
+        type="range"
+        id="perspective"
+        min="0"
+        max="500"
+        value="0"
+        data-property="perspective"
+      />
+
+      <label for="blur"> Blur: </label>
+      <input
+        type="range"
+        id="blur"
+        min="0"
+        max="10"
+        value="0"
+        data-property="blur"
+      />
+
+      <label for="color"> Base Color </label>
+      <input
+        type="color"
+        class="color"
+        id="color"
+        value="#ddb813"
+        data-property="clr-primary"
+      />
     </div>
     <div class="city__container">
       <img src="./nightcity.jpg" alt="City Image here" id="city" />

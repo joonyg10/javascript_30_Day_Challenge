@@ -14,12 +14,11 @@ const getDate = () => {
   sec.style.transform = `rotate(${currSec * 6}deg)`;
 
   if (currHour >= 12) {
-    currHour -= 12;
     meridiem = "PM";
   }
-  digitalClock.innerHTML = `${setZero(currHour)} :
-  ${setZero(currMin)} :
-  ${setZero(currSec)} ${meridiem}`;
+  digitalClock.innerHTML = `${setZero(currHour)} : ${setZero(
+    currMin
+  )} : ${setZero(currSec)} ${meridiem}`;
 };
 const setZero = (time) => (time < 10 ? `0${time}` : `${time}`);
 setInterval(getDate, 1000);

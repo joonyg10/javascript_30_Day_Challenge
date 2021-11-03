@@ -2,7 +2,6 @@ const hour = document.querySelector(".hour");
 const minute = document.querySelector(".minute");
 const sec = document.querySelector(".second");
 const digitalClock = document.querySelector(".digital__clock");
-let meridiem = "AM";
 
 const getDate = () => {
   const currTime = new Date();
@@ -13,9 +12,7 @@ const getDate = () => {
   minute.style.transform = `rotate(${currMin * 6}deg)`;
   sec.style.transform = `rotate(${currSec * 6}deg)`;
 
-  if (currHour >= 12) {
-    meridiem = "PM";
-  }
+  const meridiem = currHour >= 12 ? "PM" : "AM";
   digitalClock.innerHTML = `${setZero(currHour)} : ${setZero(
     currMin
   )} : ${setZero(currSec)} ${meridiem}`;

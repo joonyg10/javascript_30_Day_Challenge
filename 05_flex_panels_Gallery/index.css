@@ -25,7 +25,8 @@ body {
 /* each panel */
 /* ***************************************** */
 .panel {
-  flex: 1;
+  /* flex: 1 = flex: 1 1 0   width:  0 -> 20% -> 100% -> 0 -> 20% */
+  flex-basis: 20%;
   min-width: 10%;
   overflow: hidden;
   background-position: center;
@@ -35,22 +36,20 @@ body {
 }
 .panel p {
   position: relative;
+  transition: all 1s ease-in;
 }
 .panel > p:first-child {
   font-size: 1.25rem;
   top: -100%;
-  transition: all 1s ease-in;
 }
 .panel-heading {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2.25rem;
-  letter-spacing: 1.7;
 }
 .panel > p:last-child {
   font-size: 1.5rem;
   top: 120%;
-  transition: all 1s ease-in;
 }
 
 /* ***************************************** */
@@ -65,23 +64,9 @@ body {
 .open.panel > p:last-child {
   top: 55%;
 }
-
-/* ***************************************** */
-/* panel's background-image */
-/* ***************************************** */
-
-.panel1 {
-  background-image: url("./assets/pexels-anna-rye-8402387.jpg");
-}
-.panel2 {
-  background-image: url("./assets/pexels-pixabay-37403.jpg");
-}
-.panel3 {
-  background-image: url("./assets/pexels-izaac-elms-8722621.jpg");
-}
-.panel4 {
-  background-image: url("./assets/pexels-noÄman-hatice-8238749.jpg");
-}
-.panel5 {
-  background-image: url("./assets/pexels-svetlana-afonina-9730534.jpg");
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

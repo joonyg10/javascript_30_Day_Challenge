@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>HTML5 Custom video</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="video">
+        <video autoplay>
+          <source src="./sample-mov-file.mov" />
+        </video>
+        <div class="controller">
+          <div class="progress"></div>
+          <div class="buttons">
+            <div class="play-controll">
+              <span class="btn play" data-play="play">⏸</span>
+            </div>
+            <div class="audio">
+              <span class="btn audio-btn" data-sound="sound">🔉</span>
+              <input id="audio-range" type="range" max="1" step=".1" />
+            </div>
+            <button class="btn full__screen">⿴</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

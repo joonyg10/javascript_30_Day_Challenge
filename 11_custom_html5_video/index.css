@@ -1,0 +1,94 @@
+:root {
+  --clr-progress: orange;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
+.container {
+  width: 60vw;
+  position: relative;
+}
+
+/* video self */
+video {
+  width: 100%;
+  display: block;
+}
+
+/* **************************************************** */
+/* controller  */
+/* **************************************************** */
+.controller {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transform: translateY(20%);
+  transition: transform 350ms ease-in;
+}
+.container:hover .controller {
+  transform: translateY(0);
+}
+.container:hover .buttons {
+  display: flex;
+}
+
+.progress {
+  cursor: pointer;
+  height: 0.4em;
+  position: relative;
+}
+.progress::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  right: 100%;
+  border-radius: 0 1em 1em 0;
+  background-color: var(--clr-progress);
+}
+
+.buttons {
+  margin-top: 0.4em;
+  padding: 0.2em 1em;
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.full_screen {
+  outline: none;
+  border: none;
+}
+/* *************************************** */
+/* utility classes */
+/* *************************************** */
+input,
+.btn {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80vw;
+  }
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: lightpink;
+  display: grid;
+  place-items: center;
+}
+
+ul {
+  list-style: none;
+  width: 40%;
+  height: 70vh;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+li {
+  padding: 1em;
+}
+li + li {
+  border-top: 1px solid black;
+}

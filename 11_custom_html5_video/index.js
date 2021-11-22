@@ -23,6 +23,7 @@ document.head.appendChild(progressStatus);
 // *******************************************************
 // event listeners
 // *******************************************************
+
 video.addEventListener("loadedmetadata", (e) => {
   videoDuration = e.target.duration;
 });
@@ -38,6 +39,7 @@ video.addEventListener("ended", (e) => {
   cancelAnimationFrame(frameId);
   changeBtnStatus("Play");
 });
+
 progressBar.addEventListener("click", (e) => {
   const progress = (e.pageX - videoOffLeft) / e.target.offsetWidth;
   video.currentTime = progress * videoDuration;

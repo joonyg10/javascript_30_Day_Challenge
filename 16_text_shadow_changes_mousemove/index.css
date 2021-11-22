@@ -1,0 +1,41 @@
+:root {
+  --clr-primary: #fff;
+  --clr-secondary: yellow;
+  --bg-primary: linear-gradient(to bottom, blue, violet);
+  --text-shadow-main: -10px -10px 1px black;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  display: grid;
+  place-content: center;
+}
+span {
+  display: block;
+}
+.text__container {
+  margin-bottom: 1em;
+  font-size: 6rem;
+  text-transform: uppercase;
+  justify-self: center;
+}
+.text__container span {
+  color: var(--clr-secondary);
+}
+p {
+  color: var(--clr-primary);
+}
+.text__container > * {
+  text-shadow: var(--text-shadow-main);
+  transform: rotate(-10deg);
+  transition: all 1s;
+}
